@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galleria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="gallery" class="gallery" aria-live="polite"></div>
+
+<script>
+  async function loadGallery() {
+    const res = await fetch('images.json', {cache:'no-store'});
+    const items = await res.json();
+    const gal = document.getElementById('gallery');
+
+    items.forEach(it => {
+      const frame = document.createElement('div');
+      frame.className = 'frame';              // contenitore con padding nero sotto
+
+      const img = document.createElement('img');
+      img.src = it.src;
+      img.alt = '';
+      img.loading = 'lazy';
+
+      frame.appendChild(img);
+      gal.appendChild(frame);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', loadGallery);
+</script>
+</body>
+</html>

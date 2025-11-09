@@ -1,0 +1,26 @@
+[
+  {
+    "src": "images/template1.png",
+    "caption": "Template1"
+  },
+  {
+    "src": "images/template2.png",
+    "caption": "Template2"
+  },
+  {
+    "src": "images/template3.png",
+    "caption": "Template3"
+  },
+  {
+    "src": "images/template4.png",
+    "caption": "Template4"
+  },
+  {
+    "src": "images/template5.png",
+    "caption": "Template5"
+  },
+  {
+    "src": "images/template6.png",
+    "caption": "Template6"
+  }
+]

@@ -1,0 +1,25 @@
+﻿/* pagina pulita */
+html, body { margin:0; padding:0; background:#000; }
+
+/* una sola colonna SEMPRE (niente grid/flex wrap) */
+.gallery{
+    max-width: 720px;        /* limita la larghezza su desktop, regola a piacere */
+    margin: 0 auto;          /* centra su schermi grandi */
+    padding: 0;              /* niente padding esterno */
+}
+
+/* contenitore di ogni immagine: banda nera sotto */
+.frame{
+    background:#000;
+    padding-bottom: 12px;    /* fascia nera sotto l’immagine */
+}
+
+/* l’immagine occupa tutta la larghezza, mantiene proporzioni */
+.frame img{
+    display:block;
+    width:100%;
+    height:auto;             /* mantiene il rapporto d'aspetto */
+}
+
+/* spazio verticale tra le immagini (nero, coerente col fondo) */
+.frame + .frame{ margin-top: 12px; }
